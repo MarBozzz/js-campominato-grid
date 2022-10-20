@@ -13,9 +13,11 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 */
 
 const container = document.querySelector('.container');
-const sqPerRow = 10;
+let sqPerRow;
 
 document.getElementById('start').addEventListener('click', function(){
+  sqPerRow = document.getElementById('level').value;
+  console.log(sqPerRow);
   container.innerHTML = '';
   init (sqPerRow);
 })
@@ -30,9 +32,11 @@ function init (ElPerRow){
 }
 
 function createSquares (idSquare){
-  const square = document.createElement('div');
+  let square = document.createElement('div');
   square.className = 'square';
   square.classList.add('d-flex','justify-center', 'align-center');
+  square.style.height = `calc(100% / ${sqPerRow}`;
+  square.style.width = `calc(100% / ${sqPerRow}`;
   //square.innerHTML = idSquare + 1;
   square.customSq = idSquare + 1;
   square.addEventListener('click', clickedSq)

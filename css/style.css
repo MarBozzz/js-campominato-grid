@@ -54,8 +54,8 @@ body {
 }
 
 .square {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
+  /*width: calc(100% / 10);
+  height: calc(100% / 10);*/
   cursor: pointer;
 
   background-color: olivedrab;
@@ -75,7 +75,7 @@ header {
   background-color: beige;
   width: 600px;
 }
-#start {
+#start, #level {
   width: 100px;
   height: 50%;
   cursor: pointer;
