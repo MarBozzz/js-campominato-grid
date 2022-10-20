@@ -15,8 +15,12 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 const container = document.querySelector('.container');
 const sqPerRow = 10;
 
-init (sqPerRow);
+document.getElementById('start').addEventListener('click', function(){
+  container.innerHTML = '';
+  init (sqPerRow);
+})
 
+//init (sqPerRow);
 function init (ElPerRow){
   const totalSquares = Math.pow(ElPerRow, 2);
   console.log(totalSquares);
@@ -25,11 +29,19 @@ function init (ElPerRow){
   }
 }
 
-
 function createSquares (idSquare){
   const square = document.createElement('div');
   square.className = 'square';
   square.classList.add('d-flex','justify-center', 'align-center');
-  square.innerHTML = idSquare + 1;
+  //square.innerHTML = idSquare + 1;
+  square.customSq = idSquare + 1;
+  square.addEventListener('click', clickedSq)
   container.append(square);
+}
+
+function clickedSq() {
+  console.log(this.customSq);
+  //this.innerHTML = this.customSq;
+  this.classList.add('aquamarine');
+
 }

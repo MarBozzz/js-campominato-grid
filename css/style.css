@@ -20,6 +20,14 @@ body {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .align-center {
   align-items: center;
 }
@@ -36,6 +44,7 @@ body {
   background-color: bisque;
   height: 100vh;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .container {
@@ -43,11 +52,32 @@ body {
   width: 600px;
   height: 600px;
 }
+
 .square {
   width: calc(100% / 10);
   height: calc(100% / 10);
+  cursor: pointer;
 
-  background-color: aquamarine;
+  background-color: olivedrab;
   border: 1px solid black;
+}
+
+.aquamarine {
+  background-color: aquamarine;
+}
+
+header {
+  height: 50px;
+}
+
+.header-container {
+  height: 50px;
+  background-color: beige;
+  width: 600px;
+}
+#start {
+  width: 100px;
+  height: 50%;
+  cursor: pointer;
 }
 
